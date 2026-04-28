@@ -1,0 +1,23 @@
+{%extends 'base.html' %} {%block my_content%}
+<head><title>{%block title%}Книга «{{book.title}}» от автора {{book.author}}{%endblock%}</title></head>
+<table class="table table-dark table-stripped">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Цена, руб.</th>
+            <th>Год</th>
+            <th>Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ book.title}}</td>
+            <td>{{ book.author}}</td>
+            <td>{{ book.price}}</td>
+            <td>{{ book.year}}</td>
+            <td><button class="btn btn-secondary">Купить</button></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
